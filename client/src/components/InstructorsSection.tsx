@@ -13,7 +13,7 @@ export default function InstructorsSection() {
           <h2 className="font-heading text-secondary text-3xl md:text-4xl font-bold mb-4">Our Expert Instructors</h2>
           <div className="section-divider"></div>
           <p className="text-foreground max-w-3xl mx-auto">
-            Meet our team of certified black belt instructors dedicated to passing on the traditional art of Shotokan Karate.
+            Meet our team of certified black belt instructors dedicated to passing on the traditional art of karate at TMAO Karate Academy.
           </p>
         </div>
         
@@ -72,10 +72,8 @@ export default function InstructorsSection() {
         )}
         
         <div className="text-center mt-10">
-          <Link href="/instructors">
-            <a className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
-              View All Instructors
-            </a>
+          <Link href="/instructors" className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
+            View All Instructors
           </Link>
         </div>
       </div>
