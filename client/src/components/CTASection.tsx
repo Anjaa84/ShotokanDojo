@@ -9,15 +9,11 @@ export default function CTASection() {
           Take the first step toward physical fitness, mental discipline, and self-defense skills with a free trial class at any of our locations.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link href="/locations">
-            <a className="bg-white text-primary hover:bg-white/90 hover:text-primary font-bold py-3 px-8 rounded-md transition duration-300 shadow-lg inline-block">
-              Find a Location
-            </a>
+          <Link href="/locations" className="bg-white text-primary hover:bg-white/90 hover:text-primary font-bold py-3 px-8 rounded-md transition duration-300 shadow-lg inline-block">
+            Find a Location
           </Link>
-          <Link href="/contact">
-            <a className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block">
-              Contact Us
-            </a>
+          <Link href="/contact" className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block">
+            Contact Us
           </Link>
         </div>
       </div>

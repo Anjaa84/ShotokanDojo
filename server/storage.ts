@@ -646,21 +646,21 @@ export class MemStorage implements IStorage {
     const galleryImage1: InsertGalleryImage = {
       title: "TMAO Karate Group Photo",
       category: "events",
-      imageUrl: "/src/assets/karate-group.jpg",
+      imageUrl: "/karate-group.jpg",
       featured: true
     };
     
     const galleryImage2: InsertGalleryImage = {
       title: "Karate Training Session",
       category: "training",
-      imageUrl: "/src/assets/karate-training-1.jpg",
+      imageUrl: "/karate-training-1.jpg",
       featured: true
     };
     
     const galleryImage3: InsertGalleryImage = {
       title: "Students in Training",
       category: "training",
-      imageUrl: "/src/assets/karate-training-2.jpg",
+      imageUrl: "/karate-training-2.jpg",
       featured: true
     };
     

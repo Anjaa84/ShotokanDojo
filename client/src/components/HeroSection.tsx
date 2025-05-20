@@ -13,15 +13,11 @@ export default function HeroSection() {
           Join TMAO Karate Academy to develop discipline, strength, and character through authentic martial arts training.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link href="/locations">
-            <a className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300 shadow-lg inline-block">
-              Find a Class
-            </a>
+          <Link href="/locations" className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300 shadow-lg inline-block">
+            Find a Class
           </Link>
-          <Link href="/#about">
-            <a className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block">
-              Learn More
-            </a>
+          <Link href="/#about" className="bg-transparent hover:bg-white/20 text-white border-2 border-white font-bold py-3 px-8 rounded-md transition duration-300 inline-block">
+            Learn More
           </Link>
         </div>
       </div>
