@@ -26,7 +26,7 @@ export default function Footer() {
           {/* About Column */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="font-accent text-2xl text-accent">Shotokan</div>
+              <div className="font-accent text-2xl text-accent">TMAO</div>
               <div className="text-white font-heading font-bold">Karate Academy</div>
             </div>
             <p className="mb-6 text-white/80">Dedicated to teaching traditional Shotokan Karate since 1992. We provide martial arts education for all ages in a respectful, disciplined environment.</p>

@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 hero-content text-center">
         <h1 className="font-accent text-white text-4xl md:text-6xl mb-6">Mastering The Way of Karate</h1>
         <p className="font-heading text-white text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-          Join our traditional Shotokan Karate academy to develop discipline, strength, and character through authentic martial arts training.
+          Join TMAO Karate Academy to develop discipline, strength, and character through authentic martial arts training.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/locations">

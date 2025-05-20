@@ -644,23 +644,23 @@ export class MemStorage implements IStorage {
     
     // Create sample gallery images
     const galleryImage1: InsertGalleryImage = {
-      title: "Group training session",
-      category: "training",
-      imageUrl: "https://images.unsplash.com/photo-1614849427248-287c4e88ef58",
+      title: "TMAO Karate Group Photo",
+      category: "events",
+      imageUrl: "/src/assets/karate-group.jpg",
       featured: true
     };
     
     const galleryImage2: InsertGalleryImage = {
-      title: "Belt promotion ceremony",
-      category: "events",
-      imageUrl: "https://pixabay.com/get/g5530c52d97b436a309367fdaa5ce220d6dcc78586734333cf7cebcb93c4266807f0f6c65bb77de31ad20d86c9d90b6a26665d9653f330771af1152d33c8b23d1_1280.jpg",
+      title: "Karate Training Session",
+      category: "training",
+      imageUrl: "/src/assets/karate-training-1.jpg",
       featured: true
     };
     
     const galleryImage3: InsertGalleryImage = {
-      title: "Karate tournament sparring",
-      category: "competitions",
-      imageUrl: "https://pixabay.com/get/gcc1f64da59b16af5eded0146712c766db452ca92c4fb4f0e56b97e8e5ee0c87231806f24f32643187d6a492f7dd72e03_1280.jpg",
+      title: "Students in Training",
+      category: "training",
+      imageUrl: "/src/assets/karate-training-2.jpg",
       featured: true
     };
     

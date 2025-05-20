@@ -23,7 +23,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="font-accent text-2xl text-primary">Shotokan</div>
+              <div className="font-accent text-2xl text-primary">TMAO</div>
               <div className="text-secondary font-heading font-bold">Karate Academy</div>
             </Link>
           </div>
