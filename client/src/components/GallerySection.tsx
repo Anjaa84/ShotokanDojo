@@ -85,10 +85,8 @@ export default function GallerySection() {
         )}
         
         <div className="text-center mt-10">
-          <Link href="/gallery">
-            <a className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
-              View Full Gallery
-            </a>
+          <Link href="/gallery" className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
+            View Full Gallery
           </Link>
         </div>
       </div>

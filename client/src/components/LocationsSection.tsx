@@ -89,10 +89,8 @@ export default function LocationsSection() {
                         ))}
                       </ul>
                       
-                      <Link href="/contact">
-                        <a className="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-md transition duration-300">
-                          Contact This Location
-                        </a>
+                      <Link href="/contact" className="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-2 px-6 rounded-md transition duration-300">
+                        Contact This Location
                       </Link>
                     </div>
                   </div>
@@ -138,10 +136,8 @@ export default function LocationsSection() {
         )}
         
         <div className="text-center mt-10">
-          <Link href="/locations">
-            <a className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
-              View All Locations
-            </a>
+          <Link href="/locations" className="inline-block bg-secondary hover:bg-secondary/90 text-white font-bold py-3 px-8 rounded-md transition duration-300">
+            View All Locations
           </Link>
         </div>
       </div>

@@ -708,6 +708,32 @@ export class MemStorage implements IStorage {
     this.createGalleryImage(galleryImage7);
     this.createGalleryImage(galleryImage8);
     
+    // Add TMAO Karate Academy specific images
+    const tmaoImage1: InsertGalleryImage = {
+      title: "TMAO Karate Team Practice",
+      category: "training",
+      imageUrl: "/472055947_122129028374476383_5203862077452401462_n.jpg",
+      featured: true
+    };
+    
+    const tmaoImage2: InsertGalleryImage = {
+      title: "TMAO Karate Tournament",
+      category: "events",
+      imageUrl: "/499543244_122150434892476383_4842116742760404024_n.jpg",
+      featured: true
+    };
+    
+    const tmaoImage3: InsertGalleryImage = {
+      title: "TMAO Karate Belt Ceremony",
+      category: "events",
+      imageUrl: "/499548486_122150434832476383_251501860172778980_n.jpg",
+      featured: true
+    };
+    
+    this.createGalleryImage(tmaoImage1);
+    this.createGalleryImage(tmaoImage2);
+    this.createGalleryImage(tmaoImage3);
+    
     // Create sample testimonials
     const testimonial1: InsertTestimonial = {
       name: "John Wilson",
