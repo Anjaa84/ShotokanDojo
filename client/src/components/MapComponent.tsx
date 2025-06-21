@@ -2,10 +2,11 @@ import { useEffect, useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 
 interface MapComponentProps {
-  coordinates: string; // Format: "lat,lng"
+  coordinates: string; 
+  mapUrl?: string; // Format: "lat,lng"
 }
 
-export default function MapComponent({ coordinates }: MapComponentProps) {
+export default function MapComponent({ coordinates, mapUrl }: MapComponentProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
   
@@ -21,10 +22,16 @@ export default function MapComponent({ coordinates }: MapComponentProps) {
       // If a map already exists, remove it first
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
       }
       
+      // Ensure the map container exists
+      if (!mapRef.current) return;
+      // Clear any previous map content
+      mapRef.current.innerHTML = "";
+      
       // Create the map
-      const map = L.map(mapRef.current!).setView([lat, lng], 15);
+      const map = L?.map(mapRef.current).setView([lat, lng], 15);
       
       // Add tile layer
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -46,9 +53,26 @@ export default function MapComponent({ coordinates }: MapComponentProps) {
     return () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
       }
     };
-  }, [coordinates]);
+  }, [coordinates, mapUrl]);
   
-  return <div ref={mapRef} className="w-full h-full"></div>;
+  return (
+    <div className="w-full h-full">
+      {mapUrl ? (
+        <a 
+          href={mapUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="block w-full h-full"
+          style={{ pointerEvents: 'none' }}
+        >
+          <div ref={mapRef} className="w-full h-full" />
+        </a>
+      ) : (
+        <div ref={mapRef} className="w-full h-full" />
+      )}
+    </div>
+  );
 }

@@ -22,6 +22,7 @@ export const locations = pgTable("locations", {
   phone: text("phone").notNull(),
   email: text("email").notNull(),
   coordinates: text("coordinates").notNull(), // Format: "lat,lng"
+  mapUrl: text("map_url"),
   facilities: text("facilities").array().notNull(),
 });
 

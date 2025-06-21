@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
   
   async createLocation(insertLocation: InsertLocation): Promise<Location> {
     const id = this.locationId++;
-    const location: Location = { ...insertLocation, id };
+    const location: Location = { ...insertLocation, id, mapUrl: insertLocation.mapUrl ?? null };
     this.locations.set(id, location);
     return location;
   }
@@ -175,7 +175,7 @@ export class MemStorage implements IStorage {
   
   async createInstructor(insertInstructor: InsertInstructor): Promise<Instructor> {
     const id = this.instructorId++;
-    const instructor: Instructor = { ...insertInstructor, id };
+    const instructor: Instructor = { ...insertInstructor, id, featured: insertInstructor.featured ?? null };
     this.instructors.set(id, instructor);
     return instructor;
   }
@@ -206,6 +206,7 @@ export class MemStorage implements IStorage {
     const blogPost: BlogPost = { 
       ...insertBlogPost, 
       id, 
+      featured: insertBlogPost.featured ?? null,
       createdAt: new Date() 
     };
     this.blogPosts.set(id, blogPost);
@@ -235,7 +236,7 @@ export class MemStorage implements IStorage {
   
   async createGalleryImage(insertGalleryImage: InsertGalleryImage): Promise<GalleryImage> {
     const id = this.galleryImageId++;
-    const galleryImage: GalleryImage = { ...insertGalleryImage, id };
+    const galleryImage: GalleryImage = { ...insertGalleryImage, id, featured: insertGalleryImage.featured ?? null };
     this.galleryImages.set(id, galleryImage);
     return galleryImage;
   }
@@ -268,7 +269,7 @@ export class MemStorage implements IStorage {
   private initializeSampleData() {
     // Create sample locations
     const downtownLocation: InsertLocation = {
-      name: "Downtown Dojo",
+      name: "Downtown Dojo1",
       address: "123 Main Street, Downtown Area",
       phone: "(555) 123-4567",
       email: "downtown@shotokanacademy.com",
@@ -294,15 +295,15 @@ export class MemStorage implements IStorage {
       facilities: ["1,800 sq ft Training Area", "Changing Rooms", "Meditation Garden"]
     };
     
-    const eastvillageLocation: InsertLocation = {
-      name: "East Village Dojo",
-      address: "321 Village St, East Village Area",
-      phone: "(555) 456-7890",
-      email: "eastvillage@shotokanacademy.com",
-      coordinates: "34.0522,-118.1437",
-      facilities: ["2,200 sq ft Training Area", "Changing Rooms", "Private Lesson Room"]
+    const kotahenaLocation: InsertLocation = {
+      name: "Kotahena Dojo",
+      address: "Ciel Futsal - Rooftop Futsal Court, Kotahena, Colombo 13",
+      phone: "(+94) 77 123 4567", // Placeholder — replace if you have a real number
+      email: "kotahena@shotokanacademy.com", // Placeholder — update if needed
+      coordinates: "6.945672,79.8583558",
+      facilities: ["Rooftop Training Court", "Open Air Environment"],
+      mapUrl: "https://www.google.com/maps/place/Ciel+Futsal+-+Rooftop+Futsal+Court/@6.945672,79.8583558,17z"
     };
-    
     const southbayLocation: InsertLocation = {
       name: "South Bay Center",
       address: "654 Bay Drive, South Bay Area",
@@ -315,7 +316,7 @@ export class MemStorage implements IStorage {
     const location1 = this.createLocation(downtownLocation);
     const location2 = this.createLocation(westsideLocation);
     const location3 = this.createLocation(northparkLocation);
-    const location4 = this.createLocation(eastvillageLocation);
+    const location4 = this.createLocation(kotahenaLocation);
     const location5 = this.createLocation(southbayLocation);
     
     // Create sample schedules

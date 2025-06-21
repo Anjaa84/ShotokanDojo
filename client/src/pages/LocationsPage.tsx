@@ -146,7 +146,7 @@ export default function LocationsPage() {
                           return (
                             <TabsContent key={day} value={day} className="mt-0">
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {schedule.classes.classes.map((classItem, index) => (
+                                {(schedule.classes as any).classes.map((classItem: any, index: number) => (
                                   <div key={index} className="bg-muted p-4 rounded-md">
                                     <div className="flex justify-between mb-2">
                                       <span className="font-bold">{classItem.name}</span>
