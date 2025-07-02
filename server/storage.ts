@@ -268,57 +268,92 @@ export class MemStorage implements IStorage {
   // Initialize sample data
   private initializeSampleData() {
     // Create sample locations
-    const downtownLocation: InsertLocation = {
-      name: "Downtown Dojo1",
-      address: "123 Main Street, Downtown Area",
-      phone: "(555) 123-4567",
-      email: "downtown@shotokanacademy.com",
-      coordinates: "34.0522,-118.2437",
-      facilities: ["3,000 sq ft Training Area", "Changing Rooms", "Observation Area", "Pro Shop"]
-    };
-    
-    const westsideLocation: InsertLocation = {
-      name: "Westside Center",
-      address: "456 Ocean Ave, Westside Area",
-      phone: "(555) 234-5678",
-      email: "westside@shotokanacademy.com",
-      coordinates: "34.0522,-118.4437",
-      facilities: ["2,500 sq ft Training Area", "Changing Rooms", "Pro Shop", "Weight Training Room"]
-    };
-    
-    const northparkLocation: InsertLocation = {
-      name: "North Park Studio",
-      address: "789 Park Blvd, North Park Area",
-      phone: "(555) 345-6789",
-      email: "northpark@shotokanacademy.com",
-      coordinates: "34.1522,-118.2437",
-      facilities: ["1,800 sq ft Training Area", "Changing Rooms", "Meditation Garden"]
-    };
-    
-    const kotahenaLocation: InsertLocation = {
-      name: "Kotahena Dojo",
-      address: "Ciel Futsal - Rooftop Futsal Court, Kotahena, Colombo 13",
-      phone: "(+94) 77 123 4567", // Placeholder — replace if you have a real number
-      email: "kotahena@shotokanacademy.com", // Placeholder — update if needed
-      coordinates: "6.945672,79.8583558",
-      facilities: ["Rooftop Training Court", "Open Air Environment"],
-      mapUrl: "https://www.google.com/maps/place/Ciel+Futsal+-+Rooftop+Futsal+Court/@6.945672,79.8583558,17z"
-    };
-    const southbayLocation: InsertLocation = {
-      name: "South Bay Center",
-      address: "654 Bay Drive, South Bay Area",
-      phone: "(555) 567-8901",
-      email: "southbay@shotokanacademy.com",
-      coordinates: "33.9522,-118.2437",
-      facilities: ["3,500 sq ft Training Area", "Changing Rooms", "Observation Area", "Pro Shop", "Fitness Center"]
-    };
-    
-    const location1 = this.createLocation(downtownLocation);
-    const location2 = this.createLocation(westsideLocation);
-    const location3 = this.createLocation(northparkLocation);
-    const location4 = this.createLocation(kotahenaLocation);
-    const location5 = this.createLocation(southbayLocation);
-    
+    // 1. Kotahena
+const kotahenaLocation: InsertLocation = {
+  name: "Kotahena",
+  address: "Ciel Futsal – Rooftop Futsal Court, Kotahena, Colombo 13",
+  phone: "(+94) 77 100 0000",
+  email: "kotahena@shotokanacademy.com",
+  coordinates: "6.94802,79.85983", // Via Mapcarta & Wikipedia :contentReference[oaicite:0]{index=0}
+  facilities: ["Rooftop Training Court", "Open Air Environment"],
+  mapUrl: "https://cutt.ly/kotahena",
+  };
+
+// 2. Nugegoda
+const nugegodaLocation: InsertLocation = {
+  name: "Nugegoda",
+  address: "Nugegoda Karate Dojo, Nugegoda, Colombo",
+  phone: "(+94) 77 234 5678",
+  email: "nugegoda@shotokanacademy.com",
+  coordinates: "6.872779,79.889875", 
+  facilities: ["Indoor Training Hall"],
+  mapUrl: "https://cutt.ly/3efdQv1a",
+  };
+
+// 3. Kirulapone (Porvarama Rd, Colombo 5)
+const kirulaponeLocation: InsertLocation = {
+  name: "Kirulapone (Porvarama Rd, Colombo 5)",
+  address: "Porvarama Road, Colombo 5, Kirulapone",
+  phone: "(+94) 77 345 6789",
+  email: "kirulapone@shotokanacademy.com",
+  coordinates: "6.887993,79.872390",
+  facilities: ["Community Hall"],
+  mapUrl: "https://cutt.ly/Kirulapone",
+  };
+
+// 4. Wellawatte
+const wellawatteLocation: InsertLocation = {
+  name: "Wellawatte",
+  address: "Wellawatte Training Hall, Colombo 6",
+  phone: "(+94) 77 456 7890",
+  email: "wellawatte@shotokanacademy.com",
+  coordinates: "6.879167,79.862222",
+  facilities: ["Indoor Training Facility"],
+  mapUrl: "https://cutt.ly/Wellawatte",
+  };
+
+// 5. Thalawathugoda
+const thalawathugodaLocation: InsertLocation = {
+  name: "Thalawathugoda",
+  address: "Hokandara Road, Thalawathugoda",
+  phone: "(+94) 77 567 8901",
+  email: "thalawathugoda@shotokanacademy.com",
+  coordinates: "6.874444,79.958611",
+  facilities: ["Spacious Dojo"],
+  mapUrl: "https://cutt.ly/TMAOHokandara",
+  };
+
+// 6. Welivita
+const welivitaLocation: InsertLocation = {
+  name: "Welivita",
+  address: "Welivita Community Center, Welivita",
+  phone: "(+94) 77 678 9012",
+  email: "welivita@shotokanacademy.com",
+  coordinates: "6.956481,79.989708",
+  facilities: ["Community Training Facility"],
+  mapUrl: "https://cutt.ly/TMAO---Welivita",
+}
+
+const battaramullaLocation: InsertLocation = {
+  name: "Battaramulla (Kids Only)",
+  address: "Battaramulla Training Hall, Battaramulla",
+  phone: "(+94) 77 789 0123",
+  email: "battaramulla@shotokanacademy.com",
+  coordinates: "6.909722,79.927222", // Please update if you have a more precise pin
+  facilities: ["Kids Dojo", "Safe Environment"],
+  mapUrl: "https://maps.app.goo.gl/V1ZSahsmqWdnYoDB7",
+};
+
+
+const location1 = this.createLocation(kotahenaLocation);
+const location2 = this.createLocation(nugegodaLocation);
+const location3 = this.createLocation(kirulaponeLocation);
+const location4 = this.createLocation(wellawatteLocation);
+const location5 = this.createLocation(thalawathugodaLocation);
+const location6 = this.createLocation(welivitaLocation);
+const location7 = this.createLocation(battaramullaLocation);
+
+
     // Create sample schedules
     const downtownMondayClasses = {
       classes: [
