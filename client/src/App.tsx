@@ -10,6 +10,7 @@ import BlogPostPage from "@/pages/BlogPostPage";
 import GalleryPage from "@/pages/GalleryPage";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/not-found";
+import AboutPage from "@/pages/AboutPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/blog/:slug" component={BlogPostPage} />
           <Route path="/gallery" component={GalleryPage} />
           <Route path="/contact" component={ContactPage} />
+          <Route path="/about" component={AboutPage} />
           <Route component={NotFound} />
         </Switch>
       </Layout>

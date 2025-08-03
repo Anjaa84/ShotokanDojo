@@ -271,22 +271,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-heading text-secondary text-3xl font-bold mb-4">Visit Our Locations</h2>
-          <p className="text-foreground max-w-2xl mx-auto mb-8">
-            We have multiple dojos throughout the city. Find the one closest to you and stop by for a visit.
-          </p>
-          <div className="bg-muted h-[400px] rounded-lg overflow-hidden shadow-md">
-            {/* This would be replaced with a larger, full-width map */}
-            <div className="h-full flex items-center justify-center">
-              <p className="text-lg font-semibold text-secondary">
-                Interactive Map of All Locations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }

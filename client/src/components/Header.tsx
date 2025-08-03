@@ -33,7 +33,7 @@ export default function Header() {
             <Link href="/" className={`nav-link ${isActive("/") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300`}>
               Home
             </Link>
-            <Link href="/#about" className={`nav-link ${location === "/#about" ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300`}>
+            <Link href="/about" className={`nav-link ${isActive("/about") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300`}>
               About
             </Link>
             <Link href="/locations" className={`nav-link ${isActive("/locations") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300`}>
@@ -76,7 +76,7 @@ export default function Header() {
               <Link href="/" className={`nav-link ${isActive("/") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300 py-2`}>
                 Home
               </Link>
-              <Link href="/#about" className={`nav-link ${location === "/#about" ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300 py-2`}>
+              <Link href="/about" className={`nav-link ${isActive("/about") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300 py-2`}>
                 About
               </Link>
               <Link href="/locations" className={`nav-link ${isActive("/locations") ? "active-nav text-primary" : "text-secondary"} hover:text-primary transition duration-300 py-2`}>
