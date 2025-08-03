@@ -16,7 +16,7 @@ export default function AboutPage() {
         </div>
         {/* About Content */}
         <div className="md:w-1/2 relative z-10">
-          <h1 className="font-heading text-white text-4xl md:text-5xl font-bold mb-4">About Trishul Martial Arts Organization</h1>
+          <h1 className="font-heading text-white text-4xl md:text-5xl font-bold mb-4">Trishul Martial Arts Organization</h1>
           <div className="h-1 w-20 bg-primary mb-6"></div>
           <p className="text-white mb-6 text-lg">
             Trishul Martial Arts Organization was founded in 2015 by <span className="font-bold text-accent">Sensei C.V. Sudarshan</span> with a powerful vision—to use martial arts as a tool to build discipline, confidence, and both physical and mental strength in individuals of all ages.
