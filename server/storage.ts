@@ -270,7 +270,7 @@ export class MemStorage implements IStorage {
     // Create sample locations
     // 1. Kotahena
 const kotahenaLocation: InsertLocation = {
-  name: "Kotahena",
+  name: "Kotahena Branch",
   address: "Ciel Futsal – Rooftop Futsal Court, Kotahena, Colombo 13",
   phone: "(+94) 77 100 0000",
   email: "kotahena@shotokanacademy.com",
@@ -281,7 +281,7 @@ const kotahenaLocation: InsertLocation = {
 
 // 2. Nugegoda
 const nugegodaLocation: InsertLocation = {
-  name: "Nugegoda",
+  name: "Nugegoda Branch",
   address: "Nugegoda Karate Dojo, Nugegoda, Colombo",
   phone: "(+94) 77 234 5678",
   email: "nugegoda@shotokanacademy.com",
@@ -292,7 +292,7 @@ const nugegodaLocation: InsertLocation = {
 
 // 3. Kirulapone (Porvarama Rd, Colombo 5)
 const kirulaponeLocation: InsertLocation = {
-  name: "Kirulapone (Porvarama Rd, Colombo 5)",
+  name: "Kirulapone Branch",
   address: "Porvarama Road, Colombo 5, Kirulapone",
   phone: "(+94) 77 345 6789",
   email: "kirulapone@shotokanacademy.com",
@@ -303,7 +303,7 @@ const kirulaponeLocation: InsertLocation = {
 
 // 4. Wellawatte
 const wellawatteLocation: InsertLocation = {
-  name: "Wellawatte",
+  name: "Wellawatte Branch",
   address: "Wellawatte Training Hall, Colombo 6",
   phone: "(+94) 77 456 7890",
   email: "wellawatte@shotokanacademy.com",
@@ -314,7 +314,7 @@ const wellawatteLocation: InsertLocation = {
 
 // 5. Thalawathugoda
 const thalawathugodaLocation: InsertLocation = {
-  name: "Thalawathugoda",
+  name: "Thalawathugoda Branch",
   address: "Hokandara Road, Thalawathugoda",
   phone: "(+94) 77 567 8901",
   email: "thalawathugoda@shotokanacademy.com",
@@ -325,7 +325,7 @@ const thalawathugodaLocation: InsertLocation = {
 
 // 6. Welivita
 const welivitaLocation: InsertLocation = {
-  name: "Welivita",
+  name: "Welivita Branch",
   address: "Welivita Community Center, Welivita",
   phone: "(+94) 77 678 9012",
   email: "welivita@shotokanacademy.com",
@@ -335,7 +335,7 @@ const welivitaLocation: InsertLocation = {
 }
 
 const battaramullaLocation: InsertLocation = {
-  name: "Battaramulla (Kids Only)",
+  name: "Battaramulla Branch",
   address: "Battaramulla Training Hall, Battaramulla",
   phone: "(+94) 77 789 0123",
   email: "battaramulla@shotokanacademy.com",
