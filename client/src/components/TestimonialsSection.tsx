@@ -1,38 +1,7 @@
 import { Star, StarHalf } from "lucide-react";
-import { useState, useEffect } from "react";
-
-interface Testimonial {
-  id: number;
-  name: string;
-  status: string;
-  content: string;
-  rating: number;
-}
+import { testimonials } from "@/data/staticData";
 
 export default function TestimonialsSection() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function fetchTestimonials() {
-      try {
-        const res = await fetch('/api/testimonials');
-        if (!res.ok) {
-          throw new Error('Failed to fetch testimonials');
-        }
-        const data = await res.json();
-        setTestimonials(data);
-        setIsLoading(false);
-      } catch (err) {
-        setError('Error loading testimonials');
-        setIsLoading(false);
-      }
-    }
-
-    fetchTestimonials();
-  }, []);
-
   // Function to render stars based on rating
   const renderStars = (rating: number) => {
     const stars = [];
@@ -61,12 +30,7 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
-        {isLoading ? (
-          <div className="text-center py-8 text-white">Loading testimonials...</div>
-        ) : error ? (
-          <div className="text-center py-8 text-red-300">{error}</div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
                 <div className="flex items-center mb-4">
@@ -87,7 +51,6 @@ export default function TestimonialsSection() {
               </div>
             ))}
           </div>
-        )}
       </div>
     </section>
   );

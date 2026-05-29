@@ -1,51 +1,19 @@
-import { useQuery } from "@tanstack/react-query";
-import { Instructor } from "@shared/schema";
+import { instructors } from "@/data/staticData";
 
-export const useInstructorData = () => {
-  const { 
-    data: instructors = [], 
-    isLoading, 
-    error 
-  } = useQuery<Instructor[]>({
-    queryKey: ['/api/instructors']
-  });
-  
-  return {
-    instructors,
-    isLoading,
-    error
-  };
-};
+export const useInstructorData = () => ({
+  instructors,
+  isLoading: false,
+  error: null,
+});
 
-export const useFeaturedInstructorData = () => {
-  const { 
-    data: instructors = [], 
-    isLoading, 
-    error 
-  } = useQuery<Instructor[]>({
-    queryKey: ['/api/instructors/featured']
-  });
-  
-  return {
-    instructors,
-    isLoading,
-    error
-  };
-};
+export const useFeaturedInstructorData = () => ({
+  instructors: instructors.filter((i) => i.featured),
+  isLoading: false,
+  error: null,
+});
 
-export const useInstructorDetails = (id: number) => {
-  const { 
-    data: instructor, 
-    isLoading, 
-    error 
-  } = useQuery<Instructor>({
-    queryKey: [`/api/instructors/${id}`],
-    enabled: !!id
-  });
-  
-  return {
-    instructor,
-    isLoading,
-    error
-  };
-};
+export const useInstructorDetails = (id: number) => ({
+  instructor: instructors.find((i) => i.id === id),
+  isLoading: false,
+  error: null,
+});

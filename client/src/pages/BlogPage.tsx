@@ -12,7 +12,7 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   
   const categories = posts.length > 0 
-    ? ["all", ...new Set(posts.map(post => post.category))]
+    ? ["all", ...Array.from(new Set(posts.map(post => post.category)))]
     : ["all"];
   
   const filteredPosts = activeCategory === "all" 

@@ -1,25 +1,37 @@
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { queryClient } from "@/lib/queryClient";
-import { InsertContactMessage } from "@shared/schema";
+import { useState } from "react";
+
+interface ContactData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
 
 export function useSendMessage() {
-  const mutation = useMutation({
-    mutationFn: async (contactData: InsertContactMessage) => {
-      const response = await apiRequest("POST", "/api/contact", contactData);
-      return response.json();
-    },
-    onSuccess: () => {
-      // Invalidate and refetch relevant queries if needed
-      queryClient.invalidateQueries({ queryKey: ['/api/contact'] });
-    },
-  });
+  const [isPending, setIsPending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
-  return {
-    sendMessage: mutation.mutate,
-    isPending: mutation.isPending,
-    isSuccess: mutation.isSuccess,
-    isError: mutation.isError,
-    error: mutation.error,
+  const sendMessage = async (data: ContactData) => {
+    setIsPending(true);
+    setIsError(false);
+    try {
+      const body = new URLSearchParams({ "form-name": "contact", ...data });
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setIsSuccess(true);
+    } catch (err) {
+      setIsError(true);
+      throw err;
+    } finally {
+      setIsPending(false);
+    }
   };
+
+  return { sendMessage, isPending, isSuccess, isError, error: isError ? new Error("Failed to send") : null };
 }

@@ -115,7 +115,7 @@ export default function LocationsSection() {
                     {/* Schedule Content */}
                     {activeSchedule ? (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {activeSchedule.classes.classes.map((classItem, index) => (
+                        {(activeSchedule.classes as { classes: { name: string; time: string; description: string }[] }).classes.map((classItem, index) => (
                           <div key={index} className="bg-muted p-4 rounded-md">
                             <div className="flex justify-between mb-2">
                               <span className="font-bold">{classItem.name}</span>

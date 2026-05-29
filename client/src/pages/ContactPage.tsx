@@ -60,7 +60,7 @@ export default function ContactPage() {
         description: "Thank you for contacting us. We'll respond shortly.",
       });
       form.reset();
-    } catch (error) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
@@ -98,7 +98,13 @@ export default function ContactPage() {
               <h2 className="font-heading text-secondary text-2xl font-bold mb-6">Send Us a Message</h2>
               
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  name="contact"
+                  data-netlify="true"
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}

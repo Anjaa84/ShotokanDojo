@@ -1,51 +1,19 @@
-import { useQuery } from "@tanstack/react-query";
-import { GalleryImage } from "@shared/schema";
+import { galleryImages } from "@/data/staticData";
 
-export const useGalleryData = () => {
-  const { 
-    data: images = [], 
-    isLoading, 
-    error 
-  } = useQuery<GalleryImage[]>({
-    queryKey: ['/api/gallery']
-  });
-  
-  return {
-    images,
-    isLoading,
-    error
-  };
-};
+export const useGalleryData = () => ({
+  images: galleryImages,
+  isLoading: false,
+  error: null,
+});
 
-export const useGalleryCategory = (category: string) => {
-  const { 
-    data: images = [], 
-    isLoading, 
-    error 
-  } = useQuery<GalleryImage[]>({
-    queryKey: [`/api/gallery/category/${category}`],
-    enabled: !!category && category !== 'all'
-  });
-  
-  return {
-    images,
-    isLoading,
-    error
-  };
-};
+export const useGalleryCategory = (category: string) => ({
+  images: category === "all" ? galleryImages : galleryImages.filter((i) => i.category === category),
+  isLoading: false,
+  error: null,
+});
 
-export const useFeaturedGalleryData = () => {
-  const { 
-    data: images = [], 
-    isLoading, 
-    error 
-  } = useQuery<GalleryImage[]>({
-    queryKey: ['/api/gallery/featured']
-  });
-  
-  return {
-    images,
-    isLoading,
-    error
-  };
-};
+export const useFeaturedGalleryData = () => ({
+  images: galleryImages.filter((i) => i.featured),
+  isLoading: false,
+  error: null,
+});
