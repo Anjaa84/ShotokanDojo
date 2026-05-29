@@ -37,13 +37,13 @@ export default function LocationsSection() {
           <>
             {/* Locations Tabs */}
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-2 mb-8">
+              <div className="flex overflow-x-auto pb-2 gap-2 mb-8 justify-start md:justify-center scrollbar-none">
                 {locations.map(location => (
-                  <button 
+                  <button
                     key={location.id}
-                    className={`px-4 py-2 rounded-md transition ${
-                      activeLocationId === location.id 
-                        ? "bg-primary text-white" 
+                    className={`shrink-0 px-4 py-2 rounded-md transition text-sm ${
+                      activeLocationId === location.id
+                        ? "bg-primary text-white"
                         : "bg-muted hover:bg-muted/80"
                     }`}
                     onClick={() => setActiveLocationId(location.id)}

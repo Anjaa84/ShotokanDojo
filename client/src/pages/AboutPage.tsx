@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <section className="bg-secondary kanji-background py-16">
+    <section className="bg-secondary kanji-background py-10 md:py-16">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
         {/* Hero Image */}
         <div className="md:w-1/2 relative">
@@ -40,7 +40,7 @@ export default function AboutPage() {
               <div className="text-white text-sm">Programs Conducted</div>
             </div>
             <div className="bg-white/10 p-4 rounded-lg text-center flex-1 min-w-[120px]">
-              <div className="text-accent text-2xl font-bold mb-1">National & International</div>
+              <div className="text-accent text-xl font-bold mb-1">Intl.</div>
               <div className="text-white text-sm">Student Achievements</div>
             </div>
           </div>

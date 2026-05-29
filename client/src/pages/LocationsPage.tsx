@@ -28,7 +28,7 @@ export default function LocationsPage() {
         <meta property="og:description" content="Find a convenient location and schedule that fits your needs. All dojos offer a variety of class times for different age groups and skill levels." />
       </Helmet>
 
-      <div className="bg-secondary py-20 text-center text-white">
+      <div className="bg-secondary py-12 md:py-20 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Our Dojos</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ export default function LocationsPage() {
                     
                     {locationSchedules[location.id] ? (
                       <Tabs defaultValue="Monday" onValueChange={setActiveDay}>
-                        <TabsList className="mb-6">
+                        <TabsList className="mb-6 flex flex-wrap h-auto gap-1 bg-muted p-1 rounded-lg">
                           {days.map(day => {
                             // Check if this location has a schedule for this day
                             const hasSchedule = locationSchedules[location.id]?.some(

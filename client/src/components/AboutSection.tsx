@@ -6,7 +6,7 @@ export default function AboutSection() {
           {/* About Image */}
           <div className="md:w-1/2 relative">
             <img 
-              src="https://pixabay.com/get/g0849ea07e9384dd9726ab1fa3f4cfd1757c722f859e550e1d7d138e160f4d56e5c3a9ed6f2e54156d792c13e874cdb6e16c1399d6ce3a87acd9b65b1f79b548b_1280.jpg" 
+              src="/karate-group.jpg"
               alt="Traditional karate dojo with students in training" 
               className="rounded-lg shadow-xl w-full h-auto" 
             />

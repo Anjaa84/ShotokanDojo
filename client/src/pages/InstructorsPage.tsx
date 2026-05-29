@@ -19,7 +19,7 @@ export default function InstructorsPage() {
         <meta property="og:description" content="Meet our team of certified black belt instructors with decades of experience in Shotokan Karate." />
       </Helmet>
 
-      <div className="bg-secondary py-20 text-center text-white">
+      <div className="bg-secondary py-12 md:py-20 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Our Expert Instructors</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
@@ -72,9 +72,9 @@ export default function InstructorsPage() {
                       className="w-full h-64 object-cover" 
                     />
                     <div className="p-6">
-                      <div className="flex justify-between items-center mb-3">
+                      <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
                         <h3 className="font-heading text-secondary text-xl font-bold">{instructor.name}</h3>
-                        <Badge variant={instructor.title === "Chief Instructor" ? "default" : "secondary"} className="text-xs">
+                        <Badge variant={instructor.title === "Chief Instructor" ? "default" : "secondary"} className="text-xs shrink-0">
                           {instructor.title}
                         </Badge>
                       </div>

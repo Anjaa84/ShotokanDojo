@@ -81,7 +81,7 @@ export default function ContactPage() {
         <meta property="og:description" content="Get in touch with Shotokan Karate Academy for information on our programs, class schedules, or to schedule a free trial class." />
       </Helmet>
 
-      <div className="bg-secondary py-20 text-center text-white">
+      <div className="bg-secondary py-12 md:py-20 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">

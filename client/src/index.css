@@ -190,3 +190,6 @@
   border-bottom: 3px solid hsl(var(--primary));
   font-weight: 600;
 }
+
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }

@@ -50,9 +50,9 @@ export default function InstructorsSection() {
                   className="w-full h-64 object-cover" 
                 />
                 <div className="p-6">
-                  <div className="flex justify-between items-center mb-3">
+                  <div className="flex flex-wrap justify-between items-start gap-2 mb-3">
                     <h3 className="font-heading text-secondary text-xl font-bold">{instructor.name}</h3>
-                    <Badge variant={instructor.title === "Chief Instructor" ? "default" : "secondary"} className="text-xs">
+                    <Badge variant={instructor.title === "Chief Instructor" ? "default" : "secondary"} className="text-xs shrink-0">
                       {instructor.title}
                     </Badge>
                   </div>

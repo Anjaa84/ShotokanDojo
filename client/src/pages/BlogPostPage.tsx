@@ -34,7 +34,7 @@ export default function BlogPostPage() {
         </Helmet>
       )}
 
-      <div className="bg-secondary py-16 md:py-20 text-white">
+      <div className="bg-secondary py-10 md:py-16 text-white">
         <div className="container mx-auto px-4">
           <Link href="/blog">
             <a className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors">

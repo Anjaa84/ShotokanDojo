@@ -31,7 +31,7 @@ export default function BlogPage() {
         <meta property="og:description" content="Learn about karate techniques, philosophy, and training insights from our expert instructors." />
       </Helmet>
 
-      <div className="bg-secondary py-20 text-center text-white">
+      <div className="bg-secondary py-12 md:py-20 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Karate Insights & Techniques</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">

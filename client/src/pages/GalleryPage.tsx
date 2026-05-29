@@ -34,7 +34,7 @@ export default function GalleryPage() {
         <meta property="og:description" content="See our karate academy in action through our photo gallery, showcasing training, events, and our facilities." />
       </Helmet>
 
-      <div className="bg-secondary py-20 text-center text-white">
+      <div className="bg-secondary py-12 md:py-20 text-center text-white">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Our Dojo in Action</h1>
           <p className="text-white/80 text-lg max-w-2xl mx-auto">
@@ -46,24 +46,20 @@ export default function GalleryPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           {/* Gallery Controls */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex rounded-md shadow-sm bg-muted" role="group">
-              {categories.map((category) => (
-                <button 
-                  key={category.id}
-                  className={`px-4 py-2 text-sm font-medium ${
-                    category.id === categories[0].id ? "rounded-l-lg" : ""
-                  } ${
-                    category.id === categories[categories.length-1].id ? "rounded-r-lg" : ""
-                  } ${
-                    activeFilter === category.id ? "bg-primary text-white" : ""
-                  }`}
-                  onClick={() => setActiveFilter(category.id)}
-                >
-                  {category.label}
-                </button>
-              ))}
-            </div>
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                className={`px-4 py-2 text-sm font-medium rounded-md transition ${
+                  activeFilter === category.id
+                    ? "bg-primary text-white"
+                    : "bg-muted hover:bg-muted/80 text-foreground"
+                }`}
+                onClick={() => setActiveFilter(category.id)}
+              >
+                {category.label}
+              </button>
+            ))}
           </div>
           
           {isLoading ? (
